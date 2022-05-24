@@ -16,16 +16,21 @@ Project name(项目名称)：task2
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>简易电子钟的设计与实现</title>
     <link rel="stylesheet" type='text/css' href="css/clock.css">
+    <link rel="stylesheet" href="css/animate.css">
 </head>
 <body onload="getCurrentTime()">
 <h3>简易电子钟实现</h3>
 <hr/>
-<div id="clock">
-    <div class="box1" id="h"></div>
-    <div class="box2">:</div>
-    <div class="box1" id="m"></div>
-    <div class="box2">:</div>
-    <div class="box1" id="s"></div>
+<div>
+    <div class="animated fadeInUpBig">
+        <div id="clock">
+            <div class="box1" id="h"></div>
+            <div class="box2">:</div>
+            <div class="box1" id="m"></div>
+            <div class="box2">:</div>
+            <div class="box1" id="s"></div>
+        </div>
+    </div>
 </div>
 <script type="text/javascript">
     var hour = document.getElementById("h");//获取显示小时的区域框对象
