@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<!--
+Project name(项目名称)：task2
+  File name(文件名): test1
+  Authors(作者）: mao
+  Author QQ：1296193245
+  GitHub：https://github.com/maomao124/
+  Date(创建日期)： 2022/5/24
+  Time(创建时间)： 19:10
+  Description(描述)： 无
+-->
+
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>简易电子钟的设计与实现</title>
+    <link rel="stylesheet" type='text/css' href="css/clock.css">
+</head>
+<body onload="getCurrentTime()">
+<h3>简易电子钟实现</h3>
+<hr/>
+<div id="clock">
+    <div class="box1" id="h"></div>
+    <div class="box2">:</div>
+    <div class="box1" id="m"></div>
+    <div class="box2">:</div>
+    <div class="box1" id="s"></div>
+</div>
+<script type="text/javascript">
+    var hour = document.getElementById("h");//获取显示小时的区域框对象
+    var minute = document.getElementById("m");//获取显示分钟的区域框对象
+    var second = document.getElementById("s");//获取显示秒的区域框对象
+
+    //获取当前时间
+    function getCurrentTime()
+    {
+        var date = new Date();
+        var h = date.getHours();
+        var m = date.getMinutes();
+        var s = date.getSeconds();
+
+        if (h < 10)
+        {
+            h = "0" + h;
+        }//以确保0~9时也显示成两位数
+        if (m < 10)
+        {
+            m = "0" + m;
+        }//以确保0~9分钟也显示成两位数
+        if (s < 10)
+        {
+            s = "0" + s;
+        }//以确保0~9秒也显示成两位数
+
+        hour.innerHTML = h;
+        minute.innerHTML = m;
+        second.innerHTML = s;
+
+    }
+
+    setInterval("getCurrentTime()", 1000);//每秒更新一次时间
+</script>
+
+</body>
+</html>

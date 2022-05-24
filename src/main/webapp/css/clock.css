@@ -1,0 +1,36 @@
+/*
+  Project name(项目名称)：task2 
+  File name(文件名): clock
+  Author(作者）: mao
+  Author QQ：1296193245
+  GitHub：https://github.com/maomao124/
+  Date(创建日期)： 2022/5/24 
+  Time(创建时间)： 19:11
+  Version(版本): 1.0
+  Description(描述)： 无
+ */
+
+#clock {
+    width: 800px;
+    font-size: 80px;
+    font-weight: bold;
+    color: red;
+    text-align: center;
+    margin: 20px;
+
+}
+
+.box1 {
+    margin-right: 10px;
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    float: left;
+    border: gray 1px solid;
+}
+
+.box2 {
+    width: 30px;
+    float: left;
+    margin-right: 10px;
+}
